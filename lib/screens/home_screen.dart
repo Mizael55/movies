@@ -17,12 +17,16 @@ class HomeScreen extends StatelessWidget {
             ),
           ],
         ),
-        body: Column(
-          children: [
-            CardSwiper()
+        body: SingleChildScrollView(
+          child: Column(
+            children: const [
+              /// Tarjeta principal con la imagen y el texto
+              CardSwiper(),
 
-            // List of movies horizontal
-          ],
+              /// Slider de peliculas populares y recomendadas
+              MovieSlider(),
+            ],
+          ),
         ));
   }
 }
